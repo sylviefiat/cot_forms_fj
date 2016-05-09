@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+<fieldset name="mammals_admin.details"
+		label="OBSERVATION_MAMMALS_REPORT"
+		printable="true"
+		addfieldpath="/libraries/jdom/jform/fields"
+		>
+	<field name="id"
+			alias="id"
+			label="ID_MAMMALS"
+			filter="INT"
+			description="ID_DESC"
+			readonly="true"
+			type="cktext"/>
+
+	<field name="observer_name"
+			alias="observer_name"
+			label="OBSERVERS_NAME"
+			filter="STRING"
+			description="OBSERVERS_NAME_DESC"
+			required="true"
+			type="cktext"/>
+	
+	<field name="observation_date"
+			alias="observation_date"
+			required="true"
+			label="SURVEY_DATE"
+			description="SURVEY_DATE_DESC"
+			type="cktext"/>
+
+	<field name="observation_location"
+			alias="observation_location"
+			label="SURVEY_AREA"
+			filter="STRING"
+			description="SURVEY_AREA_DESC"
+			type="cktextarea"/>
+
+	<field name="observation_localisation"
+			alias="observation_localisation"
+			label="OBSERVATION_PICK"
+			description="OBSERVATION_PICK_DESC"
+			filter="STRING"
+			mode="modal"
+			targets_prefix="aPicker_"
+			class="aPicker_formatted_address"
+			type="ckaddresspicker"/>		
+
+	<field name="observation_region"
+			alias="region"
+			label="OBSERVATION_REGION"
+			description="OBSERVATION_REGION_DESC"
+			filter="STRING"
+			class="aPicker_region"
+			type="cktext"/>
+
+	<field name="observation_country"
+			alias="country"
+			label="OBSERVATION_COUNTRY"
+			description="OBSERVATION_COUNTRY_DESC"
+			filter="STRING"
+			class="aPicker_country"
+			type="cktext"/>
+
+	<field name="observation_country_code"
+			alias="country_code"
+			label="OBSERVATION_COUNTRY_CODE"
+			description="OBSERVATION_COUNTRY_CODE_DESC"
+			filter="STRING"
+			class="aPicker_country_code"
+			type="cktext"
+			/>
+
+	<field name="observation_latitude"
+			alias="latitude"
+			label="OBSERVATION_LATITUDE"
+			description="OBSERVATION_LATITUDE_DESC"
+			filter="FLOAT"
+			class="aPicker_latitude"
+			type="cktext"/>
+
+	<field name="observation_longitude"
+			alias="longitude"
+			label="OBSERVATION_LONGITUDE"
+			description="OBSERVATION_LONGITUDE_DESC"
+			filter="FLOAT"
+			class="aPicker_longitude"
+			type="cktext"/>
+
+	<field name="depth_range"
+			alias="depth_range"
+			label="depth_range"
+			description="depth_range_DESC"
+			type="checkboxes"
+			required="true"
+			multiple="true" >
+		<option value="shallow">Shallow (less than 2m)</option>
+		<option value="medium">Medium (2-10m)</option>
+		<option value="deep">Deep (more than 10m)</option>
+	</field>
+
+	<field name="observation_target"
+			alias="observation_target"
+			label="OBSERVATION_TARGET"
+			filter="STRING"
+			description="OBSERVATION_TARGET_DESC"
+			type="cktextarea"/>
+
+	<field name="observation_results"
+			alias="observation_results"
+			label="OBSERVATION_RESULTS"
+			filter="STRING"
+			description="OBSERVATION_RESULTS_DESC"
+			type="cktextarea"/>
+
+	<field name="remarks"
+			alias="remarks"
+			label="REMARKS"
+			filter="STRING"
+			description="REMARKS_DESC"
+			type="cktextarea"/>
+	
+</fieldset>
+</form>

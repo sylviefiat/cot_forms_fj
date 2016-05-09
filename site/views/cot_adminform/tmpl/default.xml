@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_COT_FORMS_TITLE_FORM_VIEW_COT_ADMIN" option="View">
+        <message>
+                        <![CDATA[COM_COT_FORMS_TITLE_FORM_VIEW_COT_ADMIN_DESC]]>
+        </message>
+    </layout>
+    <fields name="params">
+        <fieldset 
+            name="basic"
+            label="COM_COT_FORMS_FIELDSET_ITEM_ID_SELECT_LABEL">
+	    <field name="email_admin"
+			alias="email_admin"
+			label="COM_COT_FORMS_EMAIL_ADMIN_FIELD_LABEL"
+			require="true"
+                	description="COM_COT_FORMS_EMAIL_ADMIN_FIELD_LABEL_FORM"
+			type="email"> 
+	    </field>
+            <field
+                name="item_id"
+                query="SELECT 0 as `id` UNION SELECT `id` FROM #__cot_admin ORDER BY `id`"
+                type="sql"
+                key_field="id" 
+                value_field="id"
+                label="COM_COT_FORMS_ITEM_ID_SELECT_LABEL_FORM"
+                require="true"
+                description="JGLOBAL_SHOW_TITLE_DESC">
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

@@ -1,0 +1,11 @@
+.blockui_loading_img {
+
+}
+
+.blockui_loading_msg {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 120%;
+	color: green;
+	margin-top: 15px;
+}

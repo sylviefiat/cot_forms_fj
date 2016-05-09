@@ -1,0 +1,54 @@
+.modal.popupform {
+	width: 90%; /* desired relative width */
+	left: 5%; /* (100%-width)/2 */
+	/* place center */
+	margin-left:auto;
+	margin-right:auto;
+}
+
+table[data-repeatable] td.id_cln,
+table[data-repeatable] th.actions_cln,
+table[data-repeatable] td.actions_cln,
+table[data-repeatable] td.enabled_cln,
+table[data-repeatable] td.counter_cln,
+table[data-repeatable] td.ordering_cln {
+	text-align: center;
+	vertical-align: middle;
+}
+
+table[data-repeatable] th.actions_cln {
+	width: 150px;
+}
+
+table[data-repeatable] th.ordering_cln,
+table[data-repeatable] th.enabled_cln {
+	width: 50px;
+}
+
+table[data-repeatable] td.counter_cln,
+table[data-repeatable] td.id_cln{
+	width: 10px;
+}
+
+table[data-repeatable] .btn-toolbar {
+	margin: 0;
+}
+
+.config_options {
+	display: table;
+}
+
+.config_options * {
+	display: table-cell;
+	padding: 0 5px;
+}
+
+.config_options input[type="checkbox"] {
+	margin: 0;
+}
+
+
+.config_options label {
+	font-size: 10px;
+	font-style: italic;
+}

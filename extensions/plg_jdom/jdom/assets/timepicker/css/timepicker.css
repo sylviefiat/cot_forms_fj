@@ -1,0 +1,55 @@
+.timepicker-bygiro-popover > table {
+  width: 180px;
+  margin: 0;
+}
+
+.timepicker-bygiro-popover > table > tbody > tr > td {
+  text-align: center;
+  border: 0;
+}
+
+.timepicker-bygiro-popover > table > tbody > tr > td.separator {
+  line-height: 65px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.timepicker-bygiro-popover > table > tbody > tr > td > input {
+  margin: 0;
+  text-align: center;
+}
+
+.timepicker-bygiro {
+  position: relative;
+}
+
+.timepicker-bygiro-toggle {
+  *margin-bottom: -3px;
+}
+
+.timepicker-bygiro-popover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.timepicker-bygiro-popover.pull-right {
+  right: 0;
+  left: auto;
+}
+
+.open .timepicker-bygiro-popover {
+  display: block;
+}

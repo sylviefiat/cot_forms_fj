@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_cot_forms</name>
+    <creationDate>2014-11-18</creationDate>
+    <copyright>Copyright (C) 2014. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Sylvie Fiat</author>
+    <authorEmail>sylvie.fiat@ird.fr</authorEmail>
+    <authorUrl>http://umr-entropie.ird.nc</authorUrl>
+    <version>2.0.4</version>
+    <description>OREANET FJ forms</description>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <update> 
+        <schemas> 
+                <schemapath type="mysql">sql/updates/mysql</schemapath> 
+        </schemas> 
+    </update>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>cot_forms.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <languages folder="site">
+        <language tag="fr-FR">language/fr-FR.com_cot_forms.ini</language>
+        <language tag="en-GB">language/en-GB.com_cot_forms.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_cot_forms/assets/images/s_com_cot_forms.png" >COM_COT_FORMS</menu>
+        <submenu>
+			<menu link="option=com_cot_forms&amp;view=cot_admins" view="cot_admins" img="components/com_cot_forms/assets/images/s_cot_admin.png" alt="Cot_forms/Cot_admin">COM_COT_FORMS_TITLE_COT_ADMINS</menu>
+			</submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>cot_forms.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator">
+            <language tag="fr-FR">language/fr-FR.com_cot_forms.ini</language>
+            <language tag="fr-FR">language/fr-FR.com_cot_forms.sys.ini</language>
+			<language tag="en-GB">language/en-GB.com_cot_forms.ini</language>
+			<language tag="en-GB">language/en-GB.com_cot_forms.sys.ini</language>
+        </languages>
+    </administration>
+    <scriptfile>script.php</scriptfile>
+</extension>
+

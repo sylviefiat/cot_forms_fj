@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+<fieldset name="cot_admin.details"
+		label="OBSERVATION_ADMIN_REPORT"
+		printable="true"
+		addfieldpath="/libraries/jdom/jform/fields"
+		>
+	<field name="id"
+			alias="id"
+			label="ID"
+			filter="INT"
+			description="ID_DESC"
+			readonly="true"
+			type="cktext"/>
+
+	<field name="observer_name"
+			alias="observer_name"
+			label="OBSERVER_NAME"
+			filter="STRING"
+			description="OBSERVER_NAME_DESC"
+			required="true"
+			type="cktext"/>
+
+	<field name="observer_tel"
+			alias="observer_tel"
+			label="OBSERVER_TEL"
+			description="OBSERVER_TEL_DESC"
+			type="tel"/>
+				
+	<field name="observer_email"
+			alias="observer_email"
+			label="OBSERVER_EMAIL"
+			description="OBSERVER_EMAIL_DESC"
+			type="email"/>
+	
+	<field name="observation_date"
+			alias="observation_date"
+			required="true"
+			label="OBSERVATION_DATE"
+			description="OBSERVATION_DATE_DESC"
+			type="cktext"/>
+
+		<field name="observation_location"
+			alias="observation_location"
+			label="OBSERVATION_LOCATION"
+			filter="STRING"
+			description="OBSERVATION_LOCATION_DESC"
+			type="cktextarea"/>
+
+		<field name="observation_localisation"
+				alias="observation_localisation"
+				label="OBSERVATION_PICK"
+				description="OBSERVATION_PICK_DESC"
+				filter="STRING"
+				mode="modal"
+				class="formatted_address"
+				type="ckaddresspicker"/>		
+
+		<field name="observation_region"
+				alias="region"
+				label="OBSERVATION_REGION"
+				description="OBSERVATION_REGION_DESC"
+				filter="STRING"
+				class="region"
+				type="cktext"/>
+
+		<field name="observation_country"
+				alias="country"
+				label="OBSERVATION_COUNTRY"
+				description="OBSERVATION_COUNTRY_DESC"
+				filter="STRING"
+				class="country"
+				type="cktext"/>
+
+		<field name="observation_country_code"
+				alias="country_code"
+				label="OBSERVATION_COUNTRY_CODE"
+				description="OBSERVATION_COUNTRY_CODE_DESC"
+				filter="STRING"
+				class="country_code"
+				type="cktext"
+				/>
+
+		<field name="observation_latitude"
+				alias="latitude"
+				label="OBSERVATION_LATITUDE"
+				description="OBSERVATION_LATITUDE_DESC"
+				filter="FLOAT"
+				class="latitude"
+				type="cktext"/>
+
+		<field name="observation_longitude"
+				alias="longitude"
+				label="OBSERVATION_LONGITUDE"
+				description="OBSERVATION_LONGITUDE_DESC"
+				filter="FLOAT"
+				class="longitude"
+				type="cktext"/>
+			
+	
+	<field name="observation_number"
+			alias="observation_number"
+			label="OBSERVATION_NUMBER"
+			description="OBSERVATION_NUMBER_DESC"
+			labelclass="control-label"
+			type="cktext"/>	
+	
+	<field name="observation_culled"
+			alias="observation_culled"
+			label="OBSERVATION_CULLED"
+			labelclass="control-label"
+			description="OBSERVATION_CULLED_DESC"
+			type="cktext"/>
+
+	<field name="observation_method"
+			alias="observation_method"
+			label="OBSERVATION_METHOD"
+			description="OBSERVATION_METHOD_DESC"
+			type="checkboxes"
+			required="true"
+			multiple="true" >
+		<option value="snorkelling">Snorkelling</option>
+		<option value="scuba diving">Scuba diving</option>
+	</field>
+
+	<field name="counting_method_timed_swim"
+			alias="counting_method_timed_swim"
+			type="cktext"
+			labelclass="control-label"
+			label="COUNTING_METHOD_TIMED_SWIM" 
+			description="COUNTING_METHOD_TIMED_SWIM_DESC"/>
+
+	<field name="counting_method_distance_swim"
+			alias="counting_method_distance_swim"
+			type="cktext"
+			labelclass="control-label"
+			label="COUNTING_METHOD_DISTANCE_SWIM" 
+			description="COUNTING_METHOD_DISTANCE_SWIM_DESC"/>
+
+	<field name="counting_method_other"
+			alias="counting_method_other"
+			type="cktext"
+			labelclass="control-label"
+			label="COUNTING_METHOD_OTHER" 
+			description="COUNTING_METHOD_OTHER_DESC"/>
+
+	<field name="depth_range"
+			alias="depth_range"
+			label="depth_range"
+			description="depth_range_DESC"
+			type="checkboxes"
+			required="true"
+			multiple="true" >
+		<option value="shallow">Shallow (less than 2m)</option>
+		<option value="medium">Medium (2-10m)</option>
+		<option value="deep">Deep (more than 10m)</option>
+	</field>
+
+	<field name="remarks"
+			alias="remarks"
+			label="REMARKS"
+			filter="STRING"
+			description="REMARKS_DESC"
+			type="cktextarea"/>
+
+	<field name="observation_state"
+			alias="observation_state"
+			label="OBSERVATION_STATE"
+			description="OBSERVATION_STATE_DESC"
+			size="1"
+			type="cklist"
+			autocomplete="off"
+			nullLabel="OBSERVATION_LIST_NULL"
+			>
+		<option value="Low">OBSERVATION_STATE_A</option>
+		<option value="Medium">OBSERVATION_STATE_B</option>			
+		<option value="High">OBSERVATION_STATE_C</option>			
+	</field>
+
+	<field name="admin_validation"
+			alias="admin_validation"
+			label="ADMIN_VALIDATION"
+			labelclass="control-label"
+			description="ADMIN_VALIDATION_DESC"
+			type="checkbox"
+			required="true"/>	
+</fieldset>
+</form>

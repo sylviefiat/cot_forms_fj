@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+<fieldset name="cot_admin.details"
+		label="OBSERVATION_ADMIN_REPORT"
+		printable="true"
+		addfieldpath="/libraries/jdom/jform/fields"
+		>
+	<field name="id"
+			alias="id"
+			class="form-control"
+			label="ID"
+			filter="INT"
+			description="ID_DESC"
+			readonly="true"			
+			type="cktext"/>
+
+	<field name="observer_name"
+			alias="observer_name"
+			class="form-control"
+			label="OBSERVER_NAME"
+			filter="STRING"
+			description="OBSERVER_NAME_DESC"
+			required="true"
+			hint="OBSERVER_NAME_PL"
+			type="text"/>
+
+	<field name="observer_tel"
+			alias="observer_tel"
+			class="form-control"
+			label="OBSERVER_TEL"
+			description="OBSERVER_TEL_DESC"
+			hint="OBSERVER_TEL"
+			type="tel"/>
+				
+	<field name="observer_email"
+			alias="observer_email"
+			class="form-control"
+			label="OBSERVER_EMAIL"
+			description="OBSERVER_EMAIL_DESC"
+			hint="OBSERVER_EMAIL"
+			type="email"/>
+	
+	<field name="observation_date"
+			alias="observation_date"
+			class="form-control"
+			required="true"
+			label="OBSERVATION_DATE"
+			description="OBSERVATION_DATE_DESC"
+			hint="OBSERVATION_DATE"
+			type="text"/>
+
+		<field name="observation_location"
+			alias="observation_location"
+			class="form-control"
+			label="OBSERVATION_LOCATION"
+			filter="STRING"
+			description="OBSERVATION_LOCATION_DESC"
+			hint="OBSERVATION_LOCATION"
+			type="textarea"/>
+
+		<field name="observation_localisation"
+				alias="observation_localisation"
+				label="OBSERVATION_PICK"
+				description="OBSERVATION_PICK_DESC"
+				filter="STRING"
+				class="formatted_address form-control"
+				type="ckaddresspicker"/>		
+
+		<field name="observation_region"
+				readonly="true"
+				alias="region"
+				label="OBSERVATION_REGION"
+				description="OBSERVATION_REGION_DESC"
+				filter="STRING"
+				class="region form-control"
+				hint="OBSERVATION_REGION"
+				type="text"/>
+
+		<field name="observation_country"
+				readonly="true"
+				alias="country"
+				label="OBSERVATION_COUNTRY"
+				description="OBSERVATION_COUNTRY_DESC"
+				filter="STRING"
+				class="country form-control"
+				hint="OBSERVATION_COUNTRY"
+				type="text"/>
+
+		<field name="observation_country_code"
+				readonly="true"
+				alias="country_code"
+				label="OBSERVATION_COUNTRY_CODE"
+				description="OBSERVATION_COUNTRY_CODE_DESC"
+				filter="STRING"
+				class="country_code form-control"
+				hint="OBSERVATION_COUNTRY_CODE"
+				type="text"
+				/>
+
+		<field name="observation_latitude"
+				readonly="true"
+				alias="latitude"
+				label="OBSERVATION_LATITUDE"
+				description="OBSERVATION_LATITUDE_DESC"
+				filter="FLOAT"
+				class="latitude form-control"
+				hint="OBSERVATION_LATITUDE"
+				type="text"/>
+
+		<field name="observation_longitude"
+				readonly="true"
+				alias="longitude"
+				label="OBSERVATION_LONGITUDE"
+				description="OBSERVATION_LONGITUDE_DESC"
+				hint="OBSERVATION_LONGITUDE"
+				filter="FLOAT"
+				class="longitude form-control"
+				type="text"/>
+			
+	
+	<field name="observation_number"
+			alias="observation_number"
+			class="form-control"
+			label="OBSERVATION_NUMBER"
+			description="OBSERVATION_NUMBER_DESC"
+			hint="OBSERVATION_NUMBER"
+			labelclass="control-label"
+			type="text"/>	
+	
+	<field name="observation_culled"
+			alias="observation_culled"
+			class="form-control"
+			label="OBSERVATION_CULLED"
+			labelclass="control-label"
+			description="OBSERVATION_CULLED_DESC"
+			hint="OBSERVATION_CULLED"
+			type="text"/>
+
+	<field name="observation_method"
+			alias="observation_method"
+			class="form-control"
+			label="OBSERVATION_METHOD"
+			description="OBSERVATION_METHOD_DESC"
+			type="checkboxes"
+			required="true"
+			multiple="true" >
+		<option value="snorkelling">OBSERVATION_METHOD_A</option>
+		<option value="scuba diving">OBSERVATION_METHOD_B</option>
+	</field>
+
+	<field name="counting_method_timed_swim"
+			alias="counting_method_timed_swim"
+			class="form-control"
+			type="text"
+			labelclass="control-label"
+			label="COUNTING_METHOD_TIMED_SWIM" 
+			description="COUNTING_METHOD_TIMED_SWIM_DESC"
+			hint="COUNTING_METHOD_TIMED_SWIM"/>
+
+	<field name="counting_method_distance_swim"
+			alias="counting_method_distance_swim"
+			class="form-control"
+			type="text"
+			labelclass="control-label"
+			label="COUNTING_METHOD_DISTANCE_SWIM" 
+			description="COUNTING_METHOD_DISTANCE_SWIM_DESC"
+			hint="COUNTING_METHOD_DISTANCE_SWIM"/>
+
+	<field name="counting_method_other"
+			alias="counting_method_other"
+			class="form-control"
+			type="text"
+			labelclass="control-label"
+			label="COUNTING_METHOD_OTHER" 
+			description="COUNTING_METHOD_OTHER_DESC"
+			hint="COUNTING_METHOD_OTHER"/>
+
+	<field name="depth_range"
+			alias="depth_range"
+			class="form-control"
+			label="depth_range"
+			description="depth_range_DESC"
+			type="checkboxes"
+			required="true"
+			multiple="true" >
+		<option value="shallow">DEPTH_RANGE_A</option>
+		<option value="medium">DEPTH_RANGE_B</option>
+		<option value="deep">DEPTH_RANGE_C</option>
+	</field>
+
+	<field name="remarks"
+			alias="remarks"
+			class="form-control"
+			label="REMARKS"
+			filter="STRING"
+			description="REMARKS_DESC"
+			hint="REMARKS_PL"
+			type="textarea"/>
+
+	<field name="observation_state"
+			alias="observation_state"
+			class="form-control"
+			label="OBSERVATION_STATE"
+			description="OBSERVATION_STATE_DESC"
+			size="1"
+			type="list"
+			autocomplete="off"
+			nullLabel="OBSERVATION_LIST_NULL"
+			>
+		<option value="Low">OBSERVATION_STATE_A</option>
+		<option value="Medium">OBSERVATION_STATE_B</option>			
+		<option value="High">OBSERVATION_STATE_C</option>			
+	</field>
+
+	<field name="admin_validation"
+			alias="admin_validation"
+			class="form-control"
+			label="ADMIN_VALIDATION"
+			labelclass="control-label"
+			description="ADMIN_VALIDATION_DESC"
+			type="checkbox"/>
+
+	<field name="captcha" type="captcha"
+                label="CAPTCHA"
+                description="CAPTCHA_DESC"
+                validate="captcha"
+                namespace="event"
+        />	
+</fieldset>
+</form>
